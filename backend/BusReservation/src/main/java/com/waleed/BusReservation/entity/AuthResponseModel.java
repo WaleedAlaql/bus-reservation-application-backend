@@ -9,11 +9,11 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Bus {
-   
-    private Long busId;
-    private String busName;
-    private String busType;
-    private Integer totalSeat;
-    private String busNumber;
+public class AuthResponseModel {
+
+  private Integer statusCode;
+  private String message;
+  private String accessToken;
+  private Integer logInTime;
+  private Integer expirationDuration;
 }

@@ -1,5 +1,6 @@
 package com.waleed.BusReservation.entity;
 
+import java.util.Map;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,11 +10,9 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Bus {
-   
-    private Long busId;
-    private String busName;
-    private String busType;
-    private Integer totalSeat;
-    private String busNumber;
+public class ResponseModel {
+
+  private Integer statusCode;
+  private String message;
+  private Map<String, Object> object;
 }

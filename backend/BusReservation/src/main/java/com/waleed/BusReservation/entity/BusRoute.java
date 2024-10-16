@@ -9,11 +9,11 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Bus {
-   
-    private Long busId;
-    private String busName;
-    private String busType;
-    private Integer totalSeat;
-    private String busNumber;
+public class BusRoute {
+
+  private Long routeId;
+  private String routeName;
+  private String cityFrom;
+  private String cityTo;
+  private double distanceInKm;
 }

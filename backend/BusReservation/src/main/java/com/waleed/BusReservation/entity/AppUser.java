@@ -9,11 +9,10 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Bus {
-   
-    private Long busId;
-    private String busName;
-    private String busType;
-    private Integer totalSeat;
-    private String busNumber;
+public class AppUser {
+
+  private Long id;
+  private String userName;
+  private String password;
+  private String role;
 }
