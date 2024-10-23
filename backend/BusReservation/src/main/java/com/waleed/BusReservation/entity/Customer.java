@@ -9,6 +9,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import jakarta.persistence.Column;
 
 @Getter
 @Setter
@@ -21,8 +22,13 @@ public class Customer {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long customerId;
+
   private String customerName;
+
+  @Column(unique = true)
   private String mobile;
+  
+  @Column(unique = true)
   private String email;
 }
   

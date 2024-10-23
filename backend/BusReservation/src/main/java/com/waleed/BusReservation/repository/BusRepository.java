@@ -5,6 +5,5 @@ import org.springframework.stereotype.Repository;
 import com.waleed.BusReservation.entity.Bus;
 
 @Repository
-public interface BusRepository extends JpaRepository<Bus, Long>{
-    
+public interface BusRepository extends JpaRepository<Bus, Long> {
 }

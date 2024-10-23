@@ -9,6 +9,9 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToOne;
+import jakarta.persistence.CascadeType;
 
 @Getter
 @Setter
@@ -21,8 +24,15 @@ public class BusSchedule {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long scheduleId;
+
+  @OneToOne(cascade = CascadeType.MERGE)
+  @JoinColumn(name = "bus_id")
   private Bus bus;
+
+  @OneToOne(cascade = CascadeType.MERGE)
+  @JoinColumn(name = "route_id")
   private BusRoute busRoute;
+
   private String departureTime;
   private Integer ticketPrice;
   private Integer discount;
