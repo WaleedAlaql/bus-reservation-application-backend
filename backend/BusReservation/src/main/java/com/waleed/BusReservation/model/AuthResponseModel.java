@@ -1,4 +1,4 @@
-package com.waleed.BusReservation.entity;
+package com.waleed.BusReservation.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -10,10 +10,10 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class AuthResponseModel {
-    
-    private String httpStatus;
-    private String message;
-    private String accessToken;
-    private Long logInTime;
-    private Long expirationDuration;
+
+  private Integer statusCode;
+  private String message;
+  private String accessToken;
+  private Long loginTime;
+  private Long expirationDuration;
 }
